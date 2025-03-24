@@ -1,0 +1,289 @@
+/* Founder Section Styles */
+.founder-section {
+  /* padding: 60px 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0px 0; */
+}
+
+.founder-section .container {
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  /* padding: 0 15px; */
+  /* position: relative; */
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.founder-preview {
+  text-align: left;
+  background-color: white;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 10px);
+  min-height: 50vw;
+}
+
+.founder-preview h2 {
+  /* color: #2c3e50; */
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+
+.founder-preview p {
+  font-size: 24px;
+  /* color: #34495e; */
+  margin-bottom: 15px;
+}
+
+.founder-preview ul {
+  margin-bottom: 25px;
+  list-style: none;
+  padding: 0px;
+}
+
+.founder-preview li {
+  margin-bottom: 10px;
+  font-size: 24px;
+  /* color: #34495e; */
+}
+
+.founder-preview.one {
+  background-image: url(/assets/img/what-flipping.png);
+  background-size: 100%;
+  color: white;
+  height: 100%;
+}
+.founder-sk-description {
+  font-size: 34px;
+}
+.founder-preview.two {
+  background-image: url(/assets/img/founder.png);
+  background-size: cover;
+  color: white;
+  /* height: 100%; */
+  background-position: top center;
+  min-height: 400px;
+}
+
+/* Profile Card Styles */
+.founder-card {
+  /* Размер самого блока — подгоните под точные значения из макета */
+  /* width: 760px; */
+  /* height: 750px; */
+  background-color: #0E0E0E; /* Основной тёмный цвет */
+  color: #FFFFFF;
+  padding: 40px;
+  position: relative;
+  border-radius: 25px;
+  padding: 28px 28px 28px 84px;
+}
+
+/* Corner dots for decoration */
+.founder-corner-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #4A4BEF;
+  border-radius: 50%;
+}
+
+.founder-dot-top-left {
+  top: 15px;
+  left: 15px;
+}
+
+.founder-dot-top-right {
+  top: 15px;
+  right: 15px;
+}
+
+.founder-dot-bottom-left {
+  bottom: 15px;
+  left: 15px;
+}
+
+.founder-dot-bottom-right {
+  bottom: 15px;
+  right: 15px;
+}
+
+/* Верхние заголовки */
+.founder-title-small {
+  font-size: 34px;
+  color: #CCCCCC;
+  /* margin-bottom: 8px; */
+}
+
+.founder-title-big {
+  font-size: 60px; /* При необходимости увеличить до 40+ */
+  /* font-weight: 700; */
+  margin-bottom: 6px;
+}
+
+/* Строка с "Sk резидент Сколково" */
+.founder-subinfo {
+  display: flex;
+  align-items: center;
+  /* font-size: 20px; */
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.founder-sk-logo {
+  /* font-size: 26px; */
+  /* font-weight: 700; */
+  /* Пример, как можно стилизовать "Sk" отдельно */
+  /* background-color: #FFFFFF; */  /* Заливка для контраста */
+  /* color: #0E0E0E; */            /* Тёмный текст внутри */
+  /* padding: 0 6px; */
+  /* margin-right: 10px; */
+  /* border-radius: 3px; */
+}
+
+/* Секция с цифрами */
+.founder-stats {
+  margin-bottom: 110px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.founder-stat-item {
+  display: flex;
+  align-items: center; /* Чтобы цифра и подпись были на одной линии, но с разными размерами */
+  margin-bottom: 12px;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.founder-number {
+  font-size: 45px; /* Крупная цифра */
+  /* font-weight: 700; */
+  margin-right: 10px;
+  width: 30%;
+}
+
+.founder-description {
+  font-size: 24px;
+  color: #CCCCCC;
+}
+
+/* Цитата */
+.founder-quote {
+  position: absolute;
+  bottom: 40px; /* Прижатие к нижней части для "один в один" */
+  left: 84px;
+  right: 84px;
+  background-color: #3e41a0; /* Фиолетовый блок */
+  padding: 20px 17px;
+  border-radius: 5px;
+  font-size: 24px;
+  border-radius: 25px;
+  min-height: 80px;
+  line-height: normal;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .founder-card {
+      width: 100%;
+      height: auto;
+      min-height: 650px;
+  }
+  
+    .founder-title-big {
+        font-size: 28px;
+    }
+    
+   
+  
+  .founder-quote {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      right: auto;
+      margin-top: 30px;
+  }
+  
+  .founder-section .container {
+    flex-direction: column;
+  }
+  
+  .founder-preview {
+    width: 100%;
+    min-height: auto;
+  }
+  
+  .founder-title-small {
+    font-size: 28px;
+  }
+  
+  .founder-sk-description {
+    font-size: 24px;
+  }
+  
+
+}
+
+@media (max-width: 768px) {
+  .founder-card {
+    padding: 40px;
+  }
+  .founder-number {
+    font-size: 28px;
+}
+.founder-description {
+  font-size: 18px;
+}
+  .founder-title-big {
+    font-size: 36px;
+  }
+  
+  .founder-stat-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .founder-quote {
+    left: 0px;
+    /* left: 20px; */
+    font-size: 20px;
+    position: relative;
+  }
+  
+  .founder-preview.two {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-card {
+    padding: 25px;
+  }
+  
+  .founder-title-small {
+    font-size: 22px;
+  }
+  
+  .founder-title-big {
+    font-size: 28px;
+  }
+  
+  .founder-number {
+    font-size: 32px;
+    width: auto;
+    margin-right: 15px;
+  }
+  
+  .founder-stats {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}

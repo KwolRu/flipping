@@ -1,0 +1,160 @@
+.comparison-section {
+    /* padding: 80px 0; */
+    /* background-color: #07050E; */
+}
+
+.comparison-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.comparison-card {
+    flex: 1;
+    background: #EBEBEB20;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.comparison-card.flipping {
+    margin-right: 50px;
+}
+
+.comparison-card.rental {
+    margin-left: 50px;
+}
+
+.comparison-title {
+    font-size: 88px;
+    font-weight: bold;
+    margin-bottom: -40px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1;
+    /* position: absolute; */
+    /* transform: translateX(150%); */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.comparison-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comparison-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    align-items: flex-start;
+}
+
+.comparison-label {
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.comparison-value {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.comparison-item.highlight {
+    background-color: #3e41a0;
+    padding: 20px 30px;
+    border-radius: 25px;
+    /* margin: 10px 0; */
+    border-bottom: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.comparison-item.highlight .comparison-value {
+    font-size: 24px;
+}
+
+.rental .comparison-item.highlight .comparison-value {
+    color: #ffffff;
+}
+.comparison-section .container {
+    background-color: #07050E;
+    border-radius: 25px;
+    padding: 20px 10px;
+    padding-top: 50px;
+}
+.versus {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.comparison-sublabel {
+    font-size: 28px;
+    color: #505458;
+    justify-self: center;
+    text-align: center;
+    line-height: 0.8;
+    padding: 20px 0px;
+}
+@media (max-width: 992px) {
+    .comparison-wrapper {
+        flex-direction: column;
+    }
+    
+    .comparison-card.flipping {
+        margin-right: 0;
+        margin-bottom: 100px;
+    }
+    
+    .comparison-card.rental {
+        margin-left: 0;
+    }
+    
+    .versus {
+        top: calc(50% - 50px);
+        position: relative;
+        top: 0;
+        transform: none;
+        margin: 0 auto;
+        left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .comparison-card {
+        padding: 20px;
+    }
+    
+    .comparison-title {
+        font-size: 28px;
+        margin-bottom: -10px;
+    }
+    
+    .comparison-value {
+        font-size: 18px;
+    }
+    
+    .comparison-item.highlight .comparison-value {
+        font-size: 20px;
+    }
+}

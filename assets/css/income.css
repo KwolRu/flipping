@@ -1,0 +1,244 @@
+.income {
+  padding: 40px 20px;
+}
+
+.income-title {
+  margin-bottom: 30px;
+  text-align: left;
+  font-size: 60px;
+}
+
+.income-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+.income-column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.income-column--image {
+  flex: 1.2;
+}
+p.income-card-text {
+  font-size: 24px;
+}
+/* Card animation states */
+.income-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 25px;
+  min-height: calc(50% - 10px);
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smoother easing */
+  position: relative;
+  overflow: hidden;
+  max-height: 1000px; /* Safe maximum height */
+  border-width: 1px;
+  will-change: transform, opacity, max-height; /* Optimize for animation */
+}
+
+.income-card:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.income-card--full {
+  height: 100%;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.income-card--full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.income-card--full:hover img {
+  transform: scale(1.03);
+}
+
+.income-card-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Eurostile Roman';
+  font-weight: 400;
+  transition: transform 0.3s;
+}
+
+.income-card-btn:hover {
+  transform: translateX(-5px);
+}
+
+.income-card-subtext {
+  margin-top: auto;
+  font-size: 24px;
+  color: #666;
+}
+
+.income-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.income-tag {
+  background-color: #3f51b5;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  font-family: 'Eurostile Roman';
+  transition: background-color 0.3s;
+}
+
+.income-tag:hover {
+  background-color: #303f9f;
+}
+
+/* Card content styling */
+.card-content {
+  transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  max-height: 1000px;
+  opacity: 1;
+  height: 100%;
+}
+
+.primary-content {
+  position: relative;
+  z-index: 1;
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.alternate-content {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  z-index: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.alternate-content-text {
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #3f51b5;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  width: fit-content;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.alternate-content img {
+  max-width: 100%;
+  max-height: 70%;
+  object-fit: contain;
+  margin-top: auto;
+  transition: transform 0.8s ease;
+  align-self: center;
+}
+
+/* Removal animations */
+.removing-card {
+  max-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-width: 0 !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.removing-content {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition-delay: 0s;
+  visibility: hidden;
+}
+
+.showing-alternate {
+  opacity: 1 !important;
+  z-index: 2;
+  transition-delay: 0.2s;
+  visibility: visible;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .income-title {
+    font-size: 48px;
+  }
+  
+  .income-tag {
+    font-size: 20px;
+  }
+  
+  .income-card-subtext {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .income-column {
+    flex: 100%;
+  }
+  
+  .income-title {
+    font-size: 36px;
+  }
+  
+  .income-tag {
+    font-size: 18px;
+  }
+  
+  .income-card-subtext {
+    font-size: 18px;
+  }
+  
+  .income-card--full img {
+    height: 300px;
+  }
+  
+  .income-card-btn {
+    font-size: 20px;
+  }
+}

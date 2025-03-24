@@ -1,0 +1,228 @@
+.before-after {
+    padding: 0px 0;
+    width: 100%;
+}
+
+.before-after-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.before-after-slider {
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    position: relative;
+}
+
+.before-after-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 50vw;
+    max-height: 80vh;
+    border-radius: 24px;
+}
+
+.before-after-before,
+.before-after-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.before-after-before {
+    z-index: 1;
+}
+
+.before-after-after {
+    z-index: 2;
+    /* Don't set width here - will be controlled by clip-path */
+    clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+}
+
+.before-after-before img,
+.before-after-after img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.before-after-handle {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Initial position */
+    width: 4px;
+    height: 100%;
+    z-index: 3;
+    background-color: #fff;
+    cursor: ew-resize;
+    transform: translateX(-50%);
+}
+
+.before-after-handle-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #212429;
+}
+
+.before-after-handle-circle {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #212429;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.before-after-arrow-left,
+.before-after-arrow-right {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+
+.before-after-arrow-left {
+    border-right: 6px solid #ffffff;
+    margin-right: 5px;
+}
+
+.before-after-arrow-right {
+    border-left: 6px solid #ffffff;
+    margin-left: 5px;
+}
+
+
+
+/* Info panels inside the slider */
+.before-after-info {
+    position: absolute;
+    bottom: 30px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    max-width: 80%;
+    backdrop-filter: blur(3px);
+    z-index: 5;
+    /* Add transitions for color changes */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Remove default border */
+    border: none;
+}
+
+.before-after-info h3 {
+    margin: 0 0 5px;
+    font-size: 20px;
+    /* font-weight: 600; */
+}
+
+.before-after-info p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.before-after-info-before {
+    left: 20px;
+    /* Initial state will be set by JavaScript */
+    background-color: transparent;
+    color: white;
+}
+
+.before-after-info-after {
+    right: 20px;
+    /* Initial state will be set by JavaScript */
+    background-color: transparent;
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .before-after {
+        padding: 50px 0;
+    }
+    
+    .before-after-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .before-after-info h3 {
+        font-size: 16px;
+    }
+    
+    .before-after-info p {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .before-after-wrapper {
+        height: 60vw;
+    }
+    
+    .before-after-info {
+        bottom: 15px;
+        padding: 8px 12px;
+        max-width: 90%;
+    }
+    
+    .before-after-handle-circle {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .before-after-before::before,
+    .before-after-after::before {
+        padding: 3px 8px;
+        font-size: 12px;
+        top: 15px;
+        left: 15px;
+    }
+    
+    .before-after-after::before {
+        right: 15px;
+    }
+    .before-after-info-after{
+        top: 15px;
+        bottom: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .before-after {
+        padding: 40px 0;
+    }
+    
+    .before-after-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .before-after-wrapper {
+        height: 70vw;
+    }
+    
+    .before-after-info h3 {
+        font-size: 14px;
+    }
+}

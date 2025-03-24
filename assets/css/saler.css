@@ -1,0 +1,208 @@
+/* saler Section Styles */
+.saler-section {
+    /* padding: 60px 0; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* padding: 50px 0; */
+}
+
+.saler-section .container {
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    /* padding: 0 15px; */
+    /* position: relative; */
+    display: flex;
+    gap: 20px;
+    /* width: 100%; */
+    flex-wrap: wrap;
+}
+
+.saler-preview {
+    text-align: left;
+    background-color: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px);
+    min-height: 50vw;
+}
+
+.saler-preview h2 {
+    /* color: #2c3e50; */
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.saler-preview p {
+    font-size: 24px;
+    /* color: #34495e; */
+    margin-bottom: 15px;
+}
+
+.saler-preview ul {
+    margin-bottom: 25px;
+    list-style: none;
+    padding: 0px;
+}
+
+.saler-preview li {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #B6B6B6;
+}
+
+.saler-preview.one {
+    background-image: url(/assets/img/what-flipping.png);
+    background-size: 100%;
+    color: white;
+    height: 100%;
+}
+.saler-sk-description {
+    font-size: 34px;
+}
+.saler-preview.two {
+    background-image: url(/assets/img/saler.png);
+    background-size: cover;
+    color: white;
+    /* height: 100%; */
+}
+
+/* Profile Card Styles */
+.saler-card {
+    /* Размер самого блока — подгоните под точные значения из макета */
+    /* width: 760px; */
+    /* height: 750px; */
+    background-color: #0E0E0E; /* Основной тёмный цвет */
+    color: #FFFFFF;
+    display: flex;
+    padding: 40px;
+    position: relative;
+    border-radius: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.saler-list {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    /* line-height: 1.4; */
+  }
+
+  .saler-list::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    background-color: #3949ab;
+    border-radius: 50%;
+  }
+  .saler-title-card {
+    font-size: 34px;
+}
+
+.saler-titul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.saler-titul ul {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .saler-card {
+        /* width: 100%; */
+        height: auto;
+        min-height: 650px;
+    }
+    
+    .saler-title-card {
+        font-size: 28px;
+    }
+    
+    .saler-list {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .saler-card {
+        /* width: 100%; */
+        height: auto;
+        min-height: 650px;
+        gap: 20px;
+    }
+    
+    .saler-title-big {
+        font-size: 28px;
+    }
+    
+    .saler-number {
+        font-size: 28px;
+    }
+    
+    .saler-quote {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .saler-preview {
+        width: 100%;
+        min-height: 400px;
+    }
+    
+    .saler-preview.two {
+        height: 400px;
+    }
+    
+    .saler-title-card {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .saler-preview {
+        padding: 20px;
+    }
+    
+    .saler-list {
+        font-size: 18px;
+    }
+    
+    .saler-titul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .saler-titul ul {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .saler-title-card {
+        font-size: 20px;
+    }
+    
+    .saler-list {
+        font-size: 16px;
+    }
+    
+    .saler-preview.two {
+        height: 300px;
+    }
+}
